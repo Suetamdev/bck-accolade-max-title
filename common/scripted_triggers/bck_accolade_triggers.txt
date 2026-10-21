@@ -19,7 +19,13 @@ can_be_knight_trigger = {
 			is_clergy = yes
 		}
 		OR = {
-			faith = { has_doctrine_parameter = clergy_can_fight }
+			rite = { rite_has_parameter = clergy_can_fight }
+			AND = {
+				has_personal_tenet_flag = clergy_can_fight_personal
+				NOT = {
+					rite = { rite_has_parameter = pacifist }
+				}
+			}
 			culture = { has_cultural_parameter = culture_clergy_can_fight }
 			AND = {
 				$ARMY_OWNER$.culture = {
