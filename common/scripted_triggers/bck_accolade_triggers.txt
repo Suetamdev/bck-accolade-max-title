@@ -54,6 +54,7 @@ can_be_knight_trigger = {
 		}
 		this != liege.diarch
 	}
+	is_trader = no # Traders are away running a trade route
 	# knight permissions for players
 	trigger_if = {
 		limit = {
